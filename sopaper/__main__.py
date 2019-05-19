@@ -43,6 +43,7 @@ def get_args():
                         help='Manually specify a output file, rather than automatically determine the correct name.')
     ret = parser.parse_args()
     ret.title = ' '.join(ret.title)
+    ret.title = ret.title.decode('utf-8')
     return ret
 
 def main():
